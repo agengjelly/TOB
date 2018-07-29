@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+		<meta charset="utf-8" />
+		<title>TRYOUT SMK 2019</title>
+
+		<meta name="description" content="User login page" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+
+		<!-- bootstrap & fontawesome -->
+		<link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+		<link rel="stylesheet" href="assets/font-awesome/4.5.0/css/font-awesome.min.css" />
+
+		<!-- text fonts -->
+		<link rel="stylesheet" href="assets/css/fonts.googleapis.com.css" />
+
+		<!-- ace styles -->
+		<link rel="stylesheet" href="assets/css/ace.min.css" />
+
+		<!--[if lte IE 9]>
+			<link rel="stylesheet" href="assets/css/ace-part2.min.css" />
+		<![endif]-->
+		<link rel="stylesheet" href="assets/css/ace-rtl.min.css" />
+
+		<!--[if lte IE 9]>
+		  <link rel="stylesheet" href="assets/css/ace-ie.min.css" />
+		<![endif]-->
+
+		<!-- HTML5shiv and Respond.js for IE8 to support HTML5 elements and media queries -->
+
+		<!--[if lte IE 8]>
+		<script src="assets/js/html5shiv.min.js"></script>
+		<script src="assets/js/respond.min.js"></script>
+		<![endif]-->
+	</head>
+
+	<body class="login-layout">
+		<div class="main-container">
+			<div class="main-content">
+				<div class="row">
+					<div class="col-sm-10 col-sm-offset-1">
+						<div class="login-container">
+							<div class="center">
+								<h1>
+									<span><a href="index.html" title="ageng" data-rel="colorbox" >
+									<img width="100" height="100" alt="100x100" src="assets/images/gallery/logo.png" />
+										</a></span><br><br>
+									<span class="red"><b>SILAHKAN PILIH</b></span><br>
+									<span class="blue" id="id-text2"><strong>MATA PELAJARAN YANG DIUJIKAN</strong></span><br><br>
+									
+								</h1>
+								
+								<a href="matematika/index.html">
+									<button class="btn btn-primary">
+										<span class="white">
+											<i class="ace-icon fa fa-book"></i>
+											<strong>MATEMATIKA</strong>
+										</span>
+									</button>
+								</a><br><br>
+								<a href="bahasa_inggris/index.html">
+									<button class="btn btn-warning">
+										<span class="white">
+											<i class="ace-icon fa fa-book"></i>
+											<strong>BAHASA INGGRIS</strong>
+										</span>
+									</button>
+								</a><br><br>
+								<a href="bahasa_indonesia/index.html">
+									<button class="btn btn-danger">
+										<span class="white">
+											<i class="ace-icon fa fa-book"></i>
+											<strong>BAHASA INDONESIA</strong>
+										</span>
+									</button>
+								</a><br><br>
+							</div>
+
+													
+						</div>
+					</div><!-- /.col -->
+				</div><!-- /.row -->
+				<div class="footer">
+				<div class="footer-inner">
+					<div class="footer-content">
+						<span class="bigger-120">
+							<span class="blue bolder">Farazka Studio</span>
+							<span class="red bolder">&copy;</span>
+							<span class="blue bolder">2018</span>
+						</span>
+
+						&nbsp; &nbsp;
+						<span class="action-buttons">
+							<a href="https://twitter.com/farazka_studio">
+								<i class="ace-icon fa fa-twitter-square light-blue bigger-150"></i>
+							</a>
+
+							<a href="https://web.facebook.com/farazkastudio/">
+								<i class="ace-icon fa fa-facebook-square text-primary bigger-150"></i>
+							</a>
+							
+							<a href="https://www.instagram.com/ageng_j.p/">
+								<i class="ace-icon fa fa-instagram red bigger-150"></i>
+							</a>
+							
+							<a href="https://t.me/rumatika">
+								<i class="ace-icon fa fa-rss blue bigger-150"></i>
+							</a>
+						
+						</span>
+					</div>
+				</div>
+			</div><!-- /.main-content -->
+		</div><!-- /.main-container -->
+
+		<!-- basic scripts -->
+
+		<!--[if !IE]> -->
+		<script src="assets/js/jquery-2.1.4.min.js"></script>
+
+		<!-- <![endif]-->
+
+		<!--[if IE]>
+<script src="assets/js/jquery-1.11.3.min.js"></script>
+<![endif]-->
+		<script type="text/javascript">
+			if('ontouchstart' in document.documentElement) document.write("<script src='assets/js/jquery.mobile.custom.min.js'>"+"<"+"/script>");
+		</script>
+
+		<!-- inline scripts related to this page -->
+		<script type="text/javascript">
+			jQuery(function($) {
+			 $(document).on('click', '.toolbar a[data-target]', function(e) {
+				e.preventDefault();
+				var target = $(this).data('target');
+				$('.widget-box.visible').removeClass('visible');//hide others
+				$(target).addClass('visible');//show target
+			 });
+			});
+			
+			
+			
+			//you don't need this, just used for changing background
+			jQuery(function($) {
+			 $('#btn-login-dark').on('click', function(e) {
+				$('body').attr('class', 'login-layout');
+				$('#id-text2').attr('class', 'white');
+				$('#id-company-text').attr('class', 'blue');
+				
+				e.preventDefault();
+			 });
+			 $('#btn-login-light').on('click', function(e) {
+				$('body').attr('class', 'login-layout light-login');
+				$('#id-text2').attr('class', 'grey');
+				$('#id-company-text').attr('class', 'blue');
+				
+				e.preventDefault();
+			 });
+			 $('#btn-login-blur').on('click', function(e) {
+				$('body').attr('class', 'login-layout blur-login');
+				$('#id-text2').attr('class', 'white');
+				$('#id-company-text').attr('class', 'light-blue');
+				
+				e.preventDefault();
+			 });
+			 
+			});
+		</script>
+		<script src="https://www.gstatic.com/firebasejs/5.0.2/firebase.js"></script>
+		<script>
+		  // Initialize Firebase
+		  var config = {
+			apiKey: "AIzaSyCerDnredBAFYV7AWzdpbkTj5kb3oxmv4s",
+			authDomain: "matematika-smk.firebaseapp.com",
+			databaseURL: "https://matematika-smk.firebaseio.com",
+			projectId: "matematika-smk",
+			storageBucket: "matematika-smk.appspot.com",
+			messagingSenderId: "283220798961"
+		  };
+		  firebase.initializeApp(config);
+		</script>
+		
+		<script src="assets/js/index.js"></script>
+	</body>
+</html>
